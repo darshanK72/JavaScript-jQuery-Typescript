@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributes methods on Javascript</title>
+</head>
+<body>
+    <h1 id="heading" name="h1name">This is Sparta</h1>
+    <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis et quas maiores voluptatum cupiditate maxime nam sunt ex repellendus facilis.</p>
+
+    <script>
+        var ele = document.getElementById("heading");
+
+        ele.setAttribute("class","header");
+
+        console.log(ele.hasAttribute("name"));
+
+        console.log(ele.getAttribute("id"));
+
+        ele.removeAttribute("name");
+    </script>
+</body>
+</html>

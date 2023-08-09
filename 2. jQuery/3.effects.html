@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>jQuery</title>
+    <style>
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            margin: 20px;
+            
+        }
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            margin: 20px;
+            
+        }
+        .box3 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            margin: 20px;
+            
+        }
+
+        .cont{
+            display: flex;
+            margin: 20px;
+        }
+
+        button{
+            margin: 10px;
+        }
+
+        .bar{
+            width: 400px;
+            height: 800px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is sparta</h1>
+    <h2 id="heading2">This is heading 2</h2>
+    <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet aspernatur dolor accusamus
+        voluptatum saepe modi tempore quis cupiditate distinctio? Praesentium blanditiis ex illo dolorem magnam nostrum
+        facilis mollitia nisi. Omnis.</p>
+    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem similique deleniti culpa fuga
+        nesciunt facilis, cum voluptate neque fugiat excepturi.</p>
+
+    <div class="cont">
+        <div class="b1">
+            <button class="show">show</button>
+            <button class="hide">hide</button>
+            <button class="hideToggle">Toggle</button>
+    
+            <div class="box1">hello</div>
+        </div>
+    
+        <div class="b2">
+            <button class="fadein">fadeIn</button>
+            <button class="fadeout">fadeOut</button>
+            <button class="fadeToggle">Toggle</button>
+    
+            <div class="box2">hello</div>
+        </div>
+        <div class="b3">
+            <button class="slidedown">slideDown</button>
+            <button class="slideup">slideUp</button>
+            <button class="slideToggle">Toggle</button>
+    
+            <div class="box3">hello</div>
+        </div>
+    </div>
+
+    <div class="animation">
+        <button class="ani">animate</button>
+        <button class="stp">stop</button>
+        <div class="bar">
+            hello
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#heading2').click(function () {
+                $(this).hide();
+            })
+        });
+
+        $(document).ready(function () {
+            $(".para").click(function () {
+                $(this).hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $('.show').click(function () {
+                $('.box1').show(500);
+            })
+
+            $('.hide').click(function () {
+                $('.box1').hide(500);
+            })
+
+            $('.showToggle').click(function () {
+                $('.box1').toggle(500);
+            })
+        })
+
+        $(document).ready(function () {
+            $('.fadein').click(function () {
+                $('.box2').fadeIn(500);
+            })
+
+            $('.fadeout').click(function () {
+                $('.box2').fadeOut(500);
+            })
+
+            $('.fadeToggle').click(function () {
+                $('.box2').fadeToggle(500);
+            })
+
+
+        })
+
+        $(document).ready(function () {
+            $('.slidedown').click(function () {
+                $('.box3').slideDown(500);
+            })
+
+            $('.slideup').click(function () {
+                $('.box3').slideUp(500);
+            })
+
+            $('.slideToggle').click(function () {
+                $('.box3').slideToggle(500);
+            })
+        })
+
+
+        $('.btn').on({
+            mouseenter: function () {
+                console.log('enter');
+            },
+            mouseleave: function () {
+                console.log("leave")
+            }
+        })
+
+        $(document).ready(function(){
+            $('.ani').click(function(){
+                $('.bar').animate({'width':'150px',
+                left:'30px'},3000,function(){
+                    console.log('animatino complete!!');
+                })
+            })
+
+            $('.stp').click(function(){
+                $('.bar').stop();
+            })
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

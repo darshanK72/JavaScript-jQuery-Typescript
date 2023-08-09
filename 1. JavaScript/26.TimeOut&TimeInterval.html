@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout & Set Interval in JavaScript</title>
+</head>
+<body>
+
+    <button onclick="fun1()" > Click </button> <button onclick="fun2()" > Stop</button>
+
+    <script>
+        let t1,t2;
+        function fun1()
+        {
+            t1 = setTimeout(() => {
+
+                console.log("Button is Clicked");
+                
+            }, 3000);
+
+            t2 = setInterval(() => {
+                console.log("Executing");
+            }, 200);
+
+        }
+
+        function fun2(){
+            clearTimeout(t1);
+            clearInterval(t2);
+        }
+
+
+    </script>
+    
+</body>
+</html>

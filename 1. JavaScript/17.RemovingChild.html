@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removing Chile in JavaScript</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Home</li>
+        <li>Products</li>
+        <li>About Us</li>
+        <li>Services</li>
+    </ul>
+
+    <script>
+        let par = document.getElementById('list');
+
+        let ele = par.firstElementChild.nextElementSibling;
+        console.log(ele);
+        par.removeChild(ele);
+    </script>
+</body>
+</html>

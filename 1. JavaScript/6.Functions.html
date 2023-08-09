@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JavaScript</title>
+</head>
+<body>
+    <script>
+
+        // Non parameterized function
+        function greet()
+        {
+            console.log("Hello");
+        }
+
+        // Parameter functino
+        function gretPerson(name)
+        {
+            console.log("Hello, "+ name);
+        }
+
+        // function with return value
+        function multiply(a,b)
+        {
+            return a*b;
+        }
+
+
+        greet();
+        gretPerson("Darshan Khairnar");
+        console.log(multiply(235,234));
+
+        function add()
+        {
+            var result = 0;
+            for(var i = 0; i < arguments.length; i++)
+            {
+                result = result + arguments[i];
+            }
+            return result;
+        }
+        console.log(add(1,3,5,2,45,3,234,23,3));
+    </script>
+</body>
+</html>

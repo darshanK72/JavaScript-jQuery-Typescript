@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsertBefore in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <ul id="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+    <script>
+        // var newtag = document.createElement('h1');
+        // newtag.textContent = "This is Sparta";
+       
+        // var ele = document.getElementById("list");
+
+        // document.getElementsByClassName("container")[0].insertBefore(newtag,ele);
+
+        var newtag = document.createElement('li');
+        newtag.textContent = "New Item i";
+
+        var ele = document.getElementById("list");
+
+        ele.insertBefore(newtag,ele.firstChild);
+        console.log(ele.firstChild)
+        console.log(ele.firstChild.nextSibling)
+        console.log(ele.firstChild)
+        
+    </script>
+</body>
+</html>

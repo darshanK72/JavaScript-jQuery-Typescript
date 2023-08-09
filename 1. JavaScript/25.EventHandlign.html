@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <button onclick="fun()">Click</button>
+        <button ondblclick="fun1()">Double click</button> <br> <br>
+
+        <input type="text" name="" id="in1">
+    </div>
+
+    <script>
+        function fun()
+        {
+            console.log("Button Clicked!");
+        }
+
+        function fun1()
+        {
+            alert("Button Double Clicked!");
+        }
+
+        let in1 = document.getElementById("in1");
+
+        in1.addEventListener('focus',function(){
+            in1.style.cssText = "outline-color:red;"
+        })
+
+        in1.addEventListener('blur',function(){
+            in1.style.cssText = "outline:2px solid green;"
+        })
+
+        in1.addEventListener('input',function(){
+            console.log(this.value);
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+
+    <style>
+        .container
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .sub .head {
+            background-color: rgb(12, 130, 209);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+           
+        }
+
+        .sub .foot{
+            background-color: rgb(12, 130, 209);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+
+        .sub .box{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sub .box textarea{
+            width: 90%;
+            margin: 30px;
+            resize: none;
+            border: 2px solid rgb(12, 130, 209);
+            outline: none;
+            color: rgb(1, 75, 123);
+        }
+
+        .sub{
+            width: 70%;
+            border: 2px solid rgb(12, 130, 209);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sub">
+            <div class="head">
+                <h1>Word Counter</h1>
+            </div>
+            <div class="box">
+                <textarea name="" id="in1" cols="30" rows="10"></textarea>
+            </div>
+            <div class="foot">
+                <span id="word">0</span> Words and <span id="char">0</span> Characters
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let txt = document.getElementById("in1")
+        let char = document.getElementById("char");
+        let word = document.getElementById("word")
+
+        txt.addEventListener('input',function(){
+            let text = this.value;
+            char.innerText = text.length;
+            text = text.trim();
+            let words = text.split(" ");
+            words = words.filter(function(wor){
+                return wor != "";
+            })
+            word.innerText = words.length;
+        })
+
+    
+    </script>
+</body>
+</html>

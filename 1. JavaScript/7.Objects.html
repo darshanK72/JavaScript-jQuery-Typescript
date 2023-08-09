@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JavaScript</title>
+</head>
+<body>
+    <script>
+        // const person = 
+        // {
+        //     firstName : "Darshan",
+        //     lastName : "Khairnar",
+        //     age : 22,
+        //     height : 5.7,
+        //     display : function() {
+
+        //         console.log("Name : " + this.firstName + " " + this.lastName);
+        //         console.log("Age : " + this.age);
+        //         console.log("Height : " + this.height);
+        //     }
+        // };
+
+        // constructor
+        function person(fname,lname,ag,hi)
+        {
+            this.firstName = fname;
+            this.lastName = lname;
+            this.age = ag;
+            this.height = hi;
+            this.display = function()
+            {
+                console.log("Name : " + this.firstName + " " + this.lastName);
+                console.log("Age : " + this.age);
+                console.log("Height : " + this.height);
+            }
+        }
+
+        var p2 = new person("Ram","Lakhar",23,6.1);
+        var p3 = new person("Ravi","Bhore",24,5.2);
+        p2.display();
+        //person.display();
+
+        person.prototype.sayMyName = function()
+        {
+            console.log(this.firstName + this.lastName);
+        }
+
+        p2.sayMyName();
+        p3.sayMyName();
+
+        for(var key in p2)
+        {
+            console.log(key + ": " + p2[key]);
+        };
+
+    </script>
+</body>
+</html>

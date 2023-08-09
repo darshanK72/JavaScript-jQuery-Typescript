@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>jQuery</title>
+</head>
+<body>
+    <h1>This is Sparta</h1>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ab, repellat saepe nostrum nihil rerum minus fugit quae. Harum, tenetur.
+
+        <a href="#">link</a>
+    </p>
+    <label for="name">Name : </label>
+    <input type="text" name="name" id="name">
+
+    <button id="btn">show</button>
+
+    <h1 id="head"></h1>
+
+    <ul id="list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <label for="preadd">Add Before</label>
+    <input type="text" id="preadd"> 
+    <button id="btnpre">show</button> <br> <br>
+    
+    <label for="postadd">Add After</label>
+    <input type="text" id="postadd">
+    <button id="btnpost">show</button>  <br> <br>
+
+    <label for="ped">prepend</label>
+    <input type="text" id="ped"> 
+    <button id="btnped">show</button> <br> <br>
+
+    <label for="apd">append</label>
+    <input type="text" id="apd"> 
+    <button id="btnapd">show</button> <br> <br>
+
+    <button id="remove">Remove List </button> 
+    <button id="empty">Empty List</button>
+
+    <script>
+        $(document).ready(function(){
+
+            var text = $('.para').text();
+            console.log(text);
+            var html = $('.para').html("<h2>This is from script</h2>");
+            console.log(html);
+
+        })
+
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                var value = $('#name').val();
+                $('#head').text(value);
+                var attr = $('#name').attr('type');
+                console.log(attr);
+            })
+        })
+
+        $(document).ready(function(){
+            $('#btnpre').click(function(){
+                var text = $('#preadd').val();
+                $('#list').before(text);
+            })
+
+            $('#btnpost').click(function(){
+                var text = $('#postadd').val();
+                $('#list').after(text);
+            })
+            $('#btnped').click(function(){
+                var text = $('#ped').val();
+                $('#list').prepend(text);
+            })
+            $('#btnapd').click(function(){
+                var text = $('#apd').val();
+                $('#list').append(text);
+            })
+
+            $('#remove').click(function(){
+                $('#list').remove();
+            })
+
+            $('#empty').click(function(){
+                $('#list').empty();
+            })
+        })
+
+
+        
+    </script>
+</body>
+</html>

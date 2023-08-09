@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in JavaScript</title>
+</head>
+<body>
+    <script>
+        var arr = ["mango","banana","guava","pineapple","apple"];
+
+        for(var i = 0; i < arr.length; i++)
+        {
+            console.log(arr[i]);
+        }
+
+        arr[2] = "pomogranate";
+
+        arr.forEach(element => {
+            console.log(element);
+        });
+
+
+        console.log(arr.toString());
+
+        arr.pop();
+        console.log(arr.toString());
+
+        arr.push("kivi");
+        console.log(arr.toString());
+
+        arr.sort();
+        console.log(arr.toString());
+
+
+        var obs = [
+            {day : "Monday",hours : 9},
+            {day : "Tuesday",hours : 11},
+            {day : "Wednesday",hours : 12},
+            {day : "Thursday",hours : 10},
+            {day : "Friday",hours : 5}
+        ]
+
+        obs.forEach(function(ele)
+        {
+            console.log(ele)
+        });
+
+        var greaterthan10 = obs.filter(function(ele)
+        {
+            return ele.hours > 10;
+        });
+        console.log(greaterthan10);
+
+        var tp = obs.map(function(temp)
+        {
+            return temp.hours
+        });
+        console.log(tp);
+    </script>
+</body>
+</html>

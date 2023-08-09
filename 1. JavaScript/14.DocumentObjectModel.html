@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model in JavaScript</title>
+</head>
+<body>
+    <p id="paragraph1" class="newbox">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio maxime illum minus totam nulla consequatur aliquid atque iure repellendus voluptates!
+    </p>
+    <p id="paragraph2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe hic laboriosam nesciunt facilis? Dolorum officiis ea deleniti veniam iste, dolor aspernatur qui vero consequatur.
+    </p>
+    <p id="paragraph3" class="newbox">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, est. Ea consectetur est iure! Dolore quis modi optio minus molestias ut quisquam maiores praesentium debitis quia odit, inventore qui nisi sequi at repellat numquam similique. Animi dolor qui omnis sapiente.
+    </p>
+
+    <script>
+        /*
+        getElementById()
+
+        let ele = document.getElementById("paragraph2");
+        //console.log(ele);
+        console.log(ele.innerHTML);
+        ele.innerHTML = "<h1> This is Sparta </h1>";
+        */
+
+        /*
+        getElementsByClassName()
+
+        let ele = document.getElementsByClassName("newbox");
+        for(var i = 0; i < ele.length; i++)
+        {
+            ele[i].innerHTML = "<h1> This is Sparta </h1>";
+        }
+        */
+
+        /*
+        getElementsByTagName()
+
+        let ele = document.getElementsByTagName("p");
+        for(var i = 0; i < ele.length; i++)
+        {
+            ele[i].innerHTML = "<h1> This is Sparta </h1>";
+        }
+        */
+
+        /*
+        querySelector()
+
+        let ele = document.querySelector("p.newbox");
+        ele.innerHTML = "<h1> This is Sparta </h1>";
+
+        let ele = document.querySelectorAll("p.newbox");
+        for(var i = 0; i < ele.length; i++)
+        {
+            ele[i].innerHTML = "<h1> This is Sparta </h1>";
+        }
+        */
+    </script>
+</body>
+</html>

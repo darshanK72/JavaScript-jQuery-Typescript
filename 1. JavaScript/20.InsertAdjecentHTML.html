@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsertAdjecentHTML in JavaScript</title>
+</head>
+<body>
+    <!-- beforebegin -->
+    <ul id="list">
+        <!-- afterbegin -->
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <!-- beforeend -->
+    </ul>
+    <!-- afterend -->
+
+    <script>
+        let ele = document.getElementById("list");
+
+        let newhtml = "<h1> This is Sparta </h1>";
+
+        // let newtag = document.createElement('h1');
+        // newtag.textContent = "This is Sparta";
+
+        //ele.insertAdjacentElement('beforebegin',newtag);
+        // ele.insertAdjacentElement('beforeend',newtag);
+        //ele.insertAdjacentElement('afterbegin',newtag);
+
+        ele.insertAdjacentHTML("afterbegin",newhtml);
+    </script>
+</body>
+</html>

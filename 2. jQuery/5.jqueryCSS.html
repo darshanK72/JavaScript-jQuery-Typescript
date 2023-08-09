@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>jQuery</title>
+    <style>
+        .fyellow{
+            background-color: rgb(244, 244, 189);
+        }
+        .fred{
+            background-color: rgb(249, 172, 172);
+        }
+        .fblue{
+            background-color: rgb(169, 169, 226);
+        }
+
+        .bblack{
+            border: 2px solid black;
+        }
+
+        .bred{
+            border: 2px solid red;
+        }
+
+        .bblue{
+            border: 2px solid blue;
+        }
+
+        .scircle{
+            border-radius: 50%;
+        }
+
+        .con{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .shape{
+            width: 200px;
+            height: 200px;
+            /* background-color: pink; */
+            margin: 20px; 
+            display: block;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="shape"></div>
+        <div class="buttons">
+            <button id="circle">circle</button>
+            <button id="blueb">Blue Border</button>
+            <button id="redb">Red Border</button>
+            <button id="blackb">Black Border</button>
+            <button id="bluef">Blue fill</button>
+            <button id="redf">Red fill</button>
+            <button id="yellowf">Yello fill</button>
+
+            <button id="changecss">change</button>
+        </div>
+    
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+            $('#circle').click(function(){
+                $('.shape').addClass("scircle");
+            })
+
+            $('#blueb').click(function(){
+                $('.shape').toggleClass("bblue");
+            })
+            $('#redb').click(function(){
+                $('.shape').toggleClass("bred");
+            })
+            $('#blackb').click(function(){
+                $('.shape').toggleClass("bblack");
+            })
+            $('#bluef').click(function(){
+                $('.shape').toggleClass("fblue");
+            })
+            $('#redf').click(function(){
+                $('.shape').toggleClass("fred");
+            })
+            $('#yellowf').click(function(){
+                $('.shape').toggleClass("fyellow");
+            })
+
+            $('#changecss').click(function(){
+                $('.shape').css({
+                    'background-color':'green',
+                    'height':'300px',
+                    'width':'400px'
+                })
+            })
+        })
+    </script>
+</body>
+</html>

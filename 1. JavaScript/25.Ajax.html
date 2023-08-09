@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax in JavaScript</title>
+</head>
+<body>
+    <h1 id="hed1">This is Heading</h1>
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit neque ut cumque laboriosam numquam fugit iure doloribus voluptatum ea, dolore enim porro fugiat vero voluptatem ullam a assumenda. Voluptates excepturi rerum rem voluptatem ducimus saepe, sit repellat animi quibusdam velit aliquam minus doloremque tempore explicabo repellendus temporibus. Ipsum autem fugiat incidunt iure consectetur veritatis quaerat, voluptas ea recusandae quidem optio corporis qui quae enim atque excepturi iste deleniti eligendi earum assumenda. Sunt nobis nam sapiente dolorum at repellat, vero ea molestiae voluptatum maiores quo voluptate distinctio et expedita beatae vel optio, rem iusto, debitis corrupti minus consequuntur? Hic, ad corrupti?</p>
+
+    <button id="btn1">Click</button>
+
+    <script>
+
+        let btn1 = document.getElementById("btn1")
+        btn1.addEventListener("click",eventHandler)
+        
+        function eventHandler()
+        {
+            let xhr = new XMLHttpRequest()
+
+            xhr.open("POST","http://localhost:3000/user",true)
+            xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
+
+            xhr.onprogress = function(){
+                    console.log(this.status);
+                    console.log("Progressing");
+            }
+
+            xhr.onreadystatechange = function()
+            {
+                console.log("state is " + this.readyState);
+            }
+
+            xhr.onload = function(){
+                console.log(this.responseText);
+                let obj = JSON.parse(this.responseText);
+                console.log(obj);
+                console.log(typeof obj);
+                console.log("hello World")
+            }
+
+            let v = `{"id":2,"name":"Ravi","age":23,"city":"Malegaon"}`
+
+            xhr.send(v)
+
+        }
+        
+
+
+
+    </script>
+</body>
+</html>

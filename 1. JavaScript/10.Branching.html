@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branching Statement in JavaScript</title>
+</head>
+<body>
+    <script>
+        var num1 = 23;
+        var num2 = 37;
+        var num3 = 98;
+
+        console.log(findMax(num1,num2,num3));
+
+        function findMax(num1,num2,num3)
+        {
+            if(num1 >= num2 && num1 >= num3)
+            {
+                return num1;
+            }
+            else if(num2 >= num1 && num2 >= num3)
+            {
+                return num2;
+            }
+            else{
+                return num3;
+            }
+        }
+
+        var choice = 2;
+        switch(choice)
+        {
+            case 1:
+                console.log("You choose 1");
+                break;
+            case 2:
+                console.log("You chose 2");
+                break;
+        }
+    </script>
+</body>
+</html>

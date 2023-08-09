@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings in JavaScript</title>
+</head>
+<body>
+    <script>
+        // String declaration
+        let str1 = "my name is Darshan Khairnar";
+
+        // String length
+        console.log(str1.length);
+
+        // Using excape sequences in strings
+        console.log("he said that \"He is ready\"");
+
+        // slice string
+        console.log(str1.slice(3,11));
+
+        // substring 
+        console.log(str1.substring(3,12));
+
+        // substr
+        //second parameter is length of substing
+        console.log(str1.substr(1,5));
+
+        // replace
+        let str2 = str1.replace("Darshan","Harshal");
+        console.log(str2);
+
+
+        let str3 = `Hello, ${str1}`;
+        console.log(str3);
+        /*
+        Other string methods
+        1) toUpperCase() -> convert string into uppercase
+        2) toLowerCase() -> convert string to lowercase
+        3) concat() -> to concate string
+        4) trim() -> trimming whitepspaces from string
+        5) padstart() -> add padding to string at start
+        6) padEnd() -> add padding to string at end
+        7) charAt(index) -> to know character at given index
+        8) charCodeAt(index) -> to know unicode of character at given index
+        9) str[index] -> indexing of strng
+        10) split(',') -> will split the string using comma and returns array
+        11) indexOf,lastIndexOf,endsWith,search,match etc
+        */
+    </script>
+</body>
+</html>

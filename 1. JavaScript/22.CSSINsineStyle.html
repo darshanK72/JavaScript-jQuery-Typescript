@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Inline Styles in JavaScript</title>
+</head>
+<body>
+    <p id="para" style="border: 2px solid black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aliquam est quasi corporis! Consequuntur architecto non nulla optio reiciendis, placeat illo, libero aspernatur illum, ut quas molestiae fugit quo eligendi.</p>
+
+    <script>
+        var ele = document.getElementById("para");
+
+        ele.style.cssText += "margin:20px; padding:20px; background-color:pink;color:red;";
+
+    </script>
+</body>
+</html>

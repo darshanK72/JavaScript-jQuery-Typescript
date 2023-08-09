@@ -1,0 +1,16 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Darshan Khairnar",
+      "age": 22,
+      "city": "Malegaon"
+    },
+    {
+      "id": 2,
+      "name": "Ravi",
+      "age": 23,
+      "city": "Malegaon"
+    }
+  ]
+}
