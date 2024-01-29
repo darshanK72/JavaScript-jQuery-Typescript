@@ -11,10 +11,10 @@ console.log(add(523,63));
 
 // Anonomnys Function
 
-let multiply = function(num1 : number , num2 : number) :number {
+let multiply1 = function(num1 : number , num2 : number) :number {
     return num1 * num2;
 }
-console.log(multiply(25,74));
+console.log(multiply1(25,74));
 
 // Default Parameters 
 let hello = function (num1:number = 420, num2 : number = 88){

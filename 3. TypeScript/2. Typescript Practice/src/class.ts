@@ -1,4 +1,4 @@
-class Person{
+class Person1{
     private static count = 0;
     private firstName : string;
     private lastName : string;
@@ -13,7 +13,7 @@ class Person{
         this.marks = marks;
         this.dateOfBirth = dateOfBirth;
 
-        Person.count++;
+        Person1.count++;
     }
 
     public getFullName(): string{
@@ -37,15 +37,15 @@ class Person{
     }
 
     public static getCount(){
-        return Person.count;
+        return Person1.count;
     }
 }
 
-let darshan = new Person("Darshan","Khairnar",23,88.00,new Date("07/12/2000"));
+let darshan1 = new Person1("Darshan","Khairnar",23,88.00,new Date("07/12/2000"));
 
-console.log(darshan.getPersonDetails());
+console.log(darshan1.getPersonDetails());
 
-class Employee extends Person{
+class Employee1 extends Person1{
     private employeeId : number;
     private department : string;
 
@@ -60,10 +60,10 @@ class Employee extends Person{
     }
 }
 
-let prasad = new Employee("Prasad","Khairnar",23,72.23,new Date("25/06/2000"),101,"Mechanical");
+let prasad = new Employee1("Prasad","Khairnar",23,72.23,new Date("25/06/2000"),101,"Mechanical");
 console.log(prasad.getEmployeeDetails());
 
-console.log(Person.getCount());
+console.log(Person1.getCount());
 
 
 abstract class Animal{
@@ -123,5 +123,5 @@ class person
 }
 
 // Object creation
-let p1 = new person("Darshan","Khairnar",1232,false);
-console.log(p1.greet());
+let p2 = new person("Darshan","Khairnar",1232,false);
+console.log(p2.greet());

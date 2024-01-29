@@ -1,12 +1,12 @@
 // Object Interface
-interface Employee{
+interface Employee3{
     name : string,
     employeeId : number,
     department : string,
     salary : number
 }
 
-let emp1: Employee = {
+let emp1: Employee3 = {
     name : "Darshan",
     employeeId : 101,
     department : "CFMG",
@@ -38,7 +38,7 @@ interface JsonResult{
     toObject() : object;
 }
 
-class Person implements JsonResult{
+class Person2 implements JsonResult{
     name : string;
     dateOfBirth : Date;
     age : number;
@@ -48,6 +48,7 @@ class Person implements JsonResult{
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.age = age;
+        this.jsonString = '';
     }
     
 
@@ -64,7 +65,7 @@ class Person implements JsonResult{
     }
 }
 
-let darshan = new Person("Darshan Khairnar",new Date("07/12/2000"),22)
+let darshan = new Person2("Darshan Khairnar",new Date("07/12/2000"),22)
 
 console.log(darshan.toJson());
 console.log(darshan.toObject());
@@ -156,6 +157,6 @@ class employee implements person
 
 }
 
-let e1 = new employee("Darshan","Khairnar",124,true);
+let e2 = new employee("Darshan","Khairnar",124,true);
 
-console.log(e1.isMarrid());
+console.log(e2.isMarrid());

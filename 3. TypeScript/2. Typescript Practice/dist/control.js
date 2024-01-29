@@ -1,3 +1,4 @@
+"use strict";
 for (var count = 0; count < 10; count++) {
     if (count % 5 == 0) {
         console.log("Number is divisible by 5");
@@ -12,3 +13,20 @@ for (var count = 0; count < 10; count++) {
         console.log("Other value");
     }
 }
+let targetId = 'btnDelete';
+switch (targetId) {
+    case 'btnUpdate':
+        console.log('Update');
+        break;
+    case 'btnDelete':
+        console.log('Delete');
+        break;
+    case 'btnNew':
+        console.log('New');
+        break;
+}
+let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 10);

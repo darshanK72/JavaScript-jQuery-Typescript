@@ -33,7 +33,7 @@ anyvalue = 235.6523;
 console.log(anyvalue);
 
 // Object
-var student = {
+var student3 = {
     firstName: "Darshan",
     lastName : "Khairnar",
     email : "darshankhairnar72@gmail.com",
@@ -63,10 +63,10 @@ var arr : Array<any> = ["one","two",3,"four",false];
 var[a,b,c,d] = arr;
 console.log(a);
 
-var {firstName,lastName} = student;
+var {firstName,lastName} = student3;
 
 // Tuple
-var tup : [string,number] = ["Darshan",56]
+var tupple : [string,number] = ["Darshan",56]
 
 // Void
 var und : void = undefined;

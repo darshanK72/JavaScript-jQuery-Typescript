@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Variables in TypeScript
  */
@@ -20,6 +21,7 @@ var weekdays;
 })(weekdays || (weekdays = {}));
 ;
 console.log(weekdays.Friday);
+var monday = weekdays.Monday;
 // Any
 var anyvalue = 230;
 console.log(anyvalue);
@@ -30,7 +32,7 @@ console.log(anyvalue);
 anyvalue = 235.6523;
 console.log(anyvalue);
 // Object
-var student = {
+var student3 = {
     firstName: "Darshan",
     lastName: "Khairnar",
     email: "darshankhairnar72@gmail.com",
@@ -50,3 +52,14 @@ var message;
 message = 255;
 message = "hello world";
 console.log(message);
+// De-Structuring
+var arr = ["one", "two", 3, "four", false];
+var [a, b, c, d] = arr;
+console.log(a);
+var { firstName, lastName } = student3;
+// Tuple
+var tupple = ["Darshan", 56];
+// Void
+var und = undefined;
+var und1 = null;
+var password = 52343;
