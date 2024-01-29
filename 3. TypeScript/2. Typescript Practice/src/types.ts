@@ -61,6 +61,30 @@ type str = string;
 let date:int = 235;
 console.log(date);
 
+// Types
+type Customer = {
+    name:string,
+    email:string,
+    age:number
+}
+
+type Consumer = {
+    consumerId:string | number,
+    joinedDate:string | Date
+}
+
+type ConsumerCustomer = Customer & Consumer
+
+let cu : ConsumerCustomer = {
+    name:"Consumer Name",
+    email: "consumer@gmail.com",
+    age:23,
+    consumerId:'24342342',
+    joinedDate:new Date('2000/12/1')
+}
+
+console.log(cu);
+
 // interface
 interface complex {
     real:number,

@@ -42,6 +42,14 @@ console.log(days.monday);
 console.log(days.friday);
 let date = 235;
 console.log(date);
+let cu = {
+    name: "Consumer Name",
+    email: "consumer@gmail.com",
+    age: 23,
+    consumerId: '24342342',
+    joinedDate: new Date('2000/12/1')
+};
+console.log(cu);
 let c1 = {
     real: 23,
     imag: 21
